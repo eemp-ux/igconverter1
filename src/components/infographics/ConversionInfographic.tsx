@@ -2,62 +2,11 @@ import React, { useState } from 'react';
 import { Calculator, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 export const ConversionInfographic: React.FC = () => {
-  const [isReferenceOpen, setIsReferenceOpen] = useState(false);
   const [isFormulasOpen, setIsFormulasOpen] = useState(false);
   const [isExampleOpen, setIsExampleOpen] = useState(false);
 
   return (
     <div className="glass rounded-2xl p-8">
-      {/* Reference Conditions Table */}
-      <div className="glass-card rounded-xl mb-8 overflow-hidden">
-        <button
-          onClick={() => setIsReferenceOpen(!isReferenceOpen)}
-          className="w-full p-6 flex items-center justify-between hover:bg-white/5 transition-all"
-        >
-          <h3 className="text-xl font-semibold text-white">Reference Conditions</h3>
-          {isReferenceOpen ? (
-            <ChevronUp className="w-6 h-6 text-white/70" />
-          ) : (
-            <ChevronDown className="w-6 h-6 text-white/70" />
-          )}
-        </button>
-        
-        <div
-          className={`transition-all duration-300 ease-in-out ${
-            isReferenceOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-          } overflow-hidden`}
-        >
-          <div className="px-6 pb-6">
-            <div className="overflow-x-auto">
-              <table className="w-full text-white">
-                <thead>
-                  <tr className="border-b border-white/20">
-                    <th className="text-left py-3 px-4">Unit</th>
-                    <th className="text-left py-3 px-4">Temperature</th>
-                    <th className="text-left py-3 px-4">Pressure</th>
-                    <th className="text-left py-3 px-4">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-white/10">
-                    <td className="py-3 px-4 font-semibold">Nm³</td>
-                    <td className="py-3 px-4">0°C (273.15 K)</td>
-                    <td className="py-3 px-4">1 atm (101.325 kPa)</td>
-                    <td className="py-3 px-4">Normal cubic meter</td>
-                  </tr>
-                  <tr className="border-b border-white/10">
-                    <td className="py-3 px-4 font-semibold">Sm³</td>
-                    <td className="py-3 px-4">15°C (288.15 K)</td>
-                    <td className="py-3 px-4">1 atm (101.325 kPa)</td>
-                    <td className="py-3 px-4">Standard cubic meter</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Conversion Formulas */}
       <div className="glass-card rounded-xl mb-8 overflow-hidden">
         <button
@@ -228,7 +177,7 @@ export const ConversionInfographic: React.FC = () => {
                   <div className="bg-green-500/20 border-2 border-green-400/50 rounded-lg p-5">
                     <div className="text-white/70 text-sm mb-2">Final Answer:</div>
                     <div className="text-white text-2xl font-bold">
-                      Sm³ = 105.49 Sm³
+                      100 Nm³ = 105.49 Sm³
                     </div>
                   </div>
                 </div>

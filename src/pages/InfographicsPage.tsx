@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen } from 'lucide-react';
 import { IdealGasLaw } from '../components/infographics/IdealGasLaw';
 import { ConversionInfographic } from '../components/infographics/ConversionInfographic';
+import { GasPricingComparison } from '../components/infographics/GasPricingComparison';
 
 export const InfographicsPage: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ export const InfographicsPage: React.FC = () => {
             </h1>
           </div>
           <p className="text-white/80 text-lg">
-            Understanding ideal gas law and volume conversions
+            Understanding ideal gas law, volume conversions, and pricing
           </p>
         </header>
 
@@ -34,6 +35,14 @@ export const InfographicsPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white">Gas Volume Conversion Guide</h2>
             </div>
             <ConversionInfographic />
+          </section>
+
+          <section>
+            <div className="flex items-baseline gap-3 mb-6">
+              <span className="text-5xl font-bold text-white/40">3</span>
+              <h2 className="text-3xl font-bold text-white">Understanding Gas Pricing</h2>
+            </div>
+            <GasPricingComparison />
           </section>
         </div>
       </div>

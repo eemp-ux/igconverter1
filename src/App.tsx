@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { ConverterPage } from './pages/ConverterPage';
 import { InfographicsPage } from './pages/InfographicsPage';
+import { FeedbackPage } from './pages/FeedbackPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ConverterPage />} />
         <Route path="/v1" element={<InfographicsPage />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
       </Routes>
     </div>
   );

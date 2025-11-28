@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Calculator, BookOpen } from 'lucide-react';
+import { Menu, X, Calculator, BookOpen, MessageCircle } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,6 +62,19 @@ export const Navigation: React.FC = () => {
               >
                 <BookOpen className="w-5 h-5" />
                 <span className="font-medium">V1 - Infographics</span>
+              </Link>
+
+              <Link
+                to="/feedback"
+                onClick={toggleMenu}
+                className={`flex items-center gap-3 p-4 rounded-xl transition-all ${
+                  isActive('/feedback') 
+                    ? 'bg-white/30 text-white' 
+                    : 'text-white/80 hover:bg-white/10 hover:text-white'
+                }`}
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span className="font-medium">Feedback</span>
               </Link>
             </div>
 
